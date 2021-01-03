@@ -1,0 +1,29 @@
+@mixin  backgroundImage ($bz: cover, $br: no-repeat, $w: 100%) {
+  background-size: $bz;
+  background-repeat: $br;
+  width: $w;
+}
+
+@mixin dots ($w: 7px, $h: 7px, $b: 1px solid, $br: 50%) {
+  width: $w;
+  height: $h;
+  border: $b;
+  border-radius: $br;
+}
+
+@mixin line ($c: '', $w: 100px, $h: 1px, $db: block, $m: 0 auto 40px auto) {
+  content: $c;
+  width: $w;
+  height: $h;
+  display: $db;
+  margin: $m;
+}
+
+@mixin title ($ff: 'Gotham Medium Regular', $fz: 44px, $c: #2c4058, $tt: uppercase, $ta: center, $fw: 500) {
+  font-family: $ff;
+  font-size: $fz;
+  color: $c;
+  text-transform: $tt;
+  text-align: $ta;
+  font-weight: $fw;
+}
