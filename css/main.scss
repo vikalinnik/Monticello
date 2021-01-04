@@ -51,18 +51,26 @@ header {
     }
     .title {
       width: 100%;
+      padding: 0 30px;
     }
      h1 {
       font-family: "Gotham Bold", sans-serif;
       text-transform: uppercase;
       font-size: 80px;
       letter-spacing: 0.05em;
-      margin: 0 0 27px 0;
+      margin: 27px 0;
+       @media screen and (max-width: 1024px){
+         font-size: 8vw;
+         line-height: 1.1em;
+       }
     }
     p {
       font-family: 'Gotham Book', sans-serif;
       font-size: 18px;
       letter-spacing: 0.3em;
+      @media screen and (max-width: 1024px){
+        font-size: 2vw;
+      }
     }
     &__slide1 {
       @include backgroundImage;
@@ -92,7 +100,17 @@ header {
     .slick-dots {
       bottom: 50%;
       transform: rotate(90deg);
-      left: 48%;
+      left: 47%;
+    }
+  }
+  nav {
+    min-width: 50%;
+    margin: 0 20px;
+    @media screen and (max-width: 764px){
+      margin: 20px;
+    }
+    @media screen and (max-width: 640px){
+      margin: 0;
     }
   }
 }
@@ -104,16 +122,58 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  &__top {
+    @media screen and (max-width: 640px){
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 50px 15px 0 15px;
+  }
+  @media screen and (max-width: 1024px){
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (max-width: 640px){
+flex-direction: column;
+    padding: 15px 15px 0 15px;
+    //background-image: url("../img/stephan-guttinger-URB_PE8Uqys-unsplash.jpg");
+    //background-size: cover;
+    //background-repeat: no-repeat;
+  }
   &__menu {
       display: flex;
-      width: 670px;
       justify-content: space-around;
       font-family: 'Gotham Book', sans-serif;
       font-size: 14px;
       list-style: none;
+    @media screen and (max-width: 640px){
+      position: absolute;
+      left: 0;
+      width: 100%;
+      border-top: 2px solid;
+      padding: 20px;
+      text-align: center;
+      display: none;
+      font-size: 20px;
+    }
+    &--mini {
+      display: none;
+      @media screen and (max-width: 640px){
+        display: inline-block;
+      }
+    }
     li {
       cursor: pointer;
       display: inline-block;
+      margin: 0 20px;
+      @media screen and (max-width: 640px){
+        display: block;
+        margin: 20px;
+      }
       &:before {
         @include dots;
         content: '';
@@ -130,6 +190,13 @@ header {
     width: 160px;
     display: flex;
     justify-content: space-between;
+  @media screen and (max-width: 640px){
+    margin: 0 auto;
+    height: calc(100vh - 73px);
+    align-items: flex-end;
+    padding-bottom: 20px;
+    display: none;
+  }
     a {
       width: 40px;
       height: 40px;
@@ -152,20 +219,17 @@ header {
     color: #ffffff;
     opacity: 1;
   }
-
   .slick-dots li button:before {
     content: '';
     @include dots;
     color: #ffffff;
     opacity: 1;
   }
-
   .slick-initialized .slick-slide {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   .slick-dotted.slick-slider {
     margin-bottom: 0;
   }

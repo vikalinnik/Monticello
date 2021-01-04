@@ -46,18 +46,30 @@ header .slick .slick-prev, header .slick .slick-next {
 }
 header .slick .title {
   width: 100%;
+  padding: 0 30px;
 }
 header .slick h1 {
   font-family: "Gotham Bold", sans-serif;
   text-transform: uppercase;
   font-size: 80px;
   letter-spacing: 0.05em;
-  margin: 0 0 27px 0;
+  margin: 27px 0;
+}
+@media screen and (max-width: 1024px) {
+  header .slick h1 {
+    font-size: 8vw;
+    line-height: 1.1em;
+  }
 }
 header .slick p {
   font-family: "Gotham Book", sans-serif;
   font-size: 18px;
   letter-spacing: 0.3em;
+}
+@media screen and (max-width: 1024px) {
+  header .slick p {
+    font-size: 2vw;
+  }
 }
 header .slick__slide1 {
   background-size: cover;
@@ -97,7 +109,21 @@ header .slick__slide5 {
 header .slick .slick-dots {
   bottom: 50%;
   transform: rotate(90deg);
-  left: 48%;
+  left: 47%;
+}
+header nav {
+  min-width: 50%;
+  margin: 0 20px;
+}
+@media screen and (max-width: 764px) {
+  header nav {
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  header nav {
+    margin: 0;
+  }
 }
 
 .header {
@@ -108,17 +134,68 @@ header .slick .slick-dots {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 640px) {
+  .header__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 50px 15px 0 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 15px 0 15px;
+  }
+}
 .header__menu {
   display: flex;
-  width: 670px;
   justify-content: space-around;
   font-family: "Gotham Book", sans-serif;
   font-size: 14px;
   list-style: none;
 }
+@media screen and (max-width: 640px) {
+  .header__menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    font-size: 20px;
+  }
+}
+.header__menu--mini {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  .header__menu--mini {
+    display: inline-block;
+  }
+}
 .header__menu li {
   cursor: pointer;
   display: inline-block;
+  margin: 0 20px;
+}
+@media screen and (max-width: 640px) {
+  .header__menu li {
+    display: block;
+    margin: 20px;
+  }
 }
 .header__menu li:before {
   width: 7px;
@@ -137,6 +214,15 @@ header .slick .slick-dots {
   width: 160px;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 640px) {
+  .social {
+    margin: 0 auto;
+    height: calc(100vh - 73px);
+    align-items: flex-end;
+    padding-bottom: 20px;
+    display: none;
+  }
 }
 .social a {
   width: 40px;

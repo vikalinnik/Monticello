@@ -16,6 +16,14 @@
             autoplay: true,
             autoplaySpeed: 4000
         });
+
+        $('.header__menu--mini').on('click', function () {
+            $('.header__menu').slideToggle();
+            $('.social').slideToggle().css('display', 'flex');
+            $('.slick .title, .slick-dots, .down').slideToggle()
+            $(this).fadeTo(100, .5).fadeTo(100, 1);
+        });
+
         $('.menu-projects').click(function () {
             $('html, body').animate({
                 scrollTop: $('.what_we_do').offset().top
