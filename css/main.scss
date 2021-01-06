@@ -38,6 +38,9 @@ body {
 .inner {
   max-width: 1170px;
   margin: 0 auto;
+  @media screen and (max-width: 1171px){
+  padding: 0 15px;
+  }
 }
 
 header {
@@ -109,7 +112,7 @@ header {
     @media screen and (max-width: 764px){
       margin: 20px;
     }
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 620px){
       margin: 0;
     }
   }
@@ -123,7 +126,7 @@ header {
   align-items: center;
   justify-content: space-between;
   &__top {
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 620px){
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -137,7 +140,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
   }
-  @media screen and (max-width: 640px){
+  @media screen and (max-width: 620px){
 flex-direction: column;
     padding: 15px 15px 0 15px;
     //background-image: url("../img/stephan-guttinger-URB_PE8Uqys-unsplash.jpg");
@@ -150,7 +153,7 @@ flex-direction: column;
       font-family: 'Gotham Book', sans-serif;
       font-size: 14px;
       list-style: none;
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 620px){
       position: absolute;
       left: 0;
       width: 100%;
@@ -162,7 +165,7 @@ flex-direction: column;
     }
     &--mini {
       display: none;
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 620px){
         display: inline-block;
       }
     }
@@ -170,7 +173,7 @@ flex-direction: column;
       cursor: pointer;
       display: inline-block;
       margin: 0 20px;
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 620px){
         display: block;
         margin: 20px;
       }
@@ -190,13 +193,6 @@ flex-direction: column;
     width: 160px;
     display: flex;
     justify-content: space-between;
-  @media screen and (max-width: 640px){
-    margin: 0 auto;
-    height: calc(100vh - 73px);
-    align-items: flex-end;
-    padding-bottom: 20px;
-    display: none;
-  }
     a {
       width: 40px;
       height: 40px;
@@ -213,6 +209,16 @@ flex-direction: column;
       }
     }
   }
+.header {
+  .social {
+    @media screen and (max-width: 620px){
+      margin: 0 auto;
+      height: calc(100vh - 110px);
+      align-items: flex-end;
+      display: none;
+    }
+  }
+}
 header {
   .slick-dots li.slick-active button:before {
     background-color: white;
@@ -262,20 +268,42 @@ header {
 }
 .what_we_do {
   color: #2c4058;
+  @media screen and (max-width: 1170px){
+    padding: 40px 15px;
+  }
+  @media screen and (max-width: 620px){
+    padding: 20px 15px;
+  }
 }
 .block1, .block2 {
   padding-top: 100px;
+  @media screen and (max-width: 1170px){
+    padding: 0;
+  }
   &__title {
     @include title;
     margin-bottom: 100px;
+    @media screen and (max-width: 1170px){
+      margin: 0;
+    }
+    @media screen and (max-width: 620px){
+      font-size: 8vw;
+    }
     &:before {
       @include line;
       background-color: #2c4058;
+      @media screen and (max-width: 620px){
+        margin-bottom: 20px;
+      }
     }
   }
   &__flexbox {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 1170px){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     &__images {
       position: relative;
       div {
@@ -284,25 +312,46 @@ header {
         background-color: #67afe2;
         position: absolute;
         left: -215px;
+        @media screen and (max-width: 1170px){
+          display: none;
+        }
       }
       img {
         position: relative;
         top: 70px;
+        @media screen and (max-width: 1170px){
+          top: 30px;
+          width: 100%;
+        }
       }
     }
     &__info {
       margin-left: 70px;
       padding-top: 125px;
+      @media screen and (max-width: 1170px){
+        padding-top: 60px;
+        width: 630px;
+        margin-left: 0;
+      }
       h4 {
         font-family: 'Gotham Book', sans-serif;
         text-transform: uppercase;
         font-size: 22px;
+        @media screen and (max-width: 620px){
+          font-size: 3vw;
+        }
       }
       h3 {
         font-family: 'Gotham Bold', sans-serif;
         text-transform: uppercase;
         font-size: 44px;
         margin: 20px 0 40px 0;
+        @media screen and (max-width: 1170px){
+          margin: 10px 0;
+        }
+        @media screen and (max-width: 620px){
+          font-size: 7vw;
+        }
       }
       p {
         font-family: 'Open Sans', sans-serif;
@@ -310,23 +359,46 @@ header {
         font-weight: 400;
         line-height: 30px;
         margin-bottom: 50px;
+        @media screen and (max-width: 1170px){
+          margin-bottom: 30px;
+        }
+        @media screen and (max-width: 620px){
+          font-size: 3vw;
+          line-height: 1.6em;
+        }
       }
       .location {
         font-style: italic;
         margin-bottom: 0;
         margin-top: 60px;
+        @media screen and (max-width: 1170px){
+          margin-top: 30px;
+        }
       }
     }
   }
 }
 
-.block2 {
+ .block2 {
   padding-top: 170px;
   padding-bottom: 140px;
+  @media screen and (max-width: 1170px){
+    padding: 0;
+  }
   &__flexbox {
+    @media screen and (max-width: 1170px){
+      flex-wrap: wrap-reverse;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: 620px){
+      margin: 0 0 20px 0;
+    }
   &__info {
     margin-left: 0;
     margin-right: 70px;
+    @media screen and (max-width: 1170px){
+      margin-right: 0;
+    }
     }
     &__images {
       div {
@@ -340,6 +412,9 @@ img[alt=build] {
   transition: .3s;
   &:hover {
     transform: scale(1.1);
+    @media screen and (max-width: 1170px){
+      transform: none;
+    }
   }
 }
 
@@ -347,8 +422,12 @@ img[alt=build] {
   background-image: url("../img/gallery.png");
   @include backgroundImage;
  padding: 140px 0;
+  width: 100%;
+  @media screen and (max-width: 1170px){
+padding: 40px 15px;
+  }
   .slick-track {
-    margin-bottom: 60px;
+    margin:0 auto 60px auto;
   }
   .slick-dots li.slick-active button:before {
     background-color: white;
@@ -396,6 +475,13 @@ img[alt=build] {
     @include title;
     color: white;
     margin-bottom: 100px;
+    @media screen and (max-width: 1170px){
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 620px){
+      font-size: 8vw;
+    }
+
     &:before {
       @include line;
       background-color: white;
@@ -403,10 +489,12 @@ img[alt=build] {
   }
     .block {
       width: 360px;
-      min-width: 360px;
       margin: 0 10px;
       background-color: white;
       overflow: hidden;
+      @media screen and (max-width: 620px){
+        width: 360px;
+      }
       &:focus {
         outline: none;
       }
@@ -482,17 +570,8 @@ img[alt=build] {
           color: #4b5562;
           line-height: 30px;
           margin: 8px 0 37px 0;
-          height: 58px;
-          overflow: hidden;
           span {
-            width: 12px;
-            height: 12px;
-            border-bottom: 1px solid;
-            border-left: 1px solid;
-            display: block;
-            transform: rotate(135deg);
-            margin: 10px auto 0 auto;
-            cursor: pointer;
+            display: none;
           }
         }
       }
@@ -522,6 +601,9 @@ img[alt=build] {
         text-transform: uppercase;
         margin-bottom: 10px;
         cursor: pointer;
+        @media screen and (max-width: 1024px) {
+          font-size: 1.8vw;
+        }
       }
       .date {
         color: #55b7ff;
@@ -532,6 +614,12 @@ img[alt=build] {
         cursor: pointer;
         height: auto;
       }
+    }
+  }
+  .slick-slider {
+    @media screen and (max-width: 1024px){
+      width: 80%;
+      margin: 0 auto;
     }
   }
 }
@@ -546,6 +634,10 @@ img[alt=build] {
   transition: .3s;
   position: relative;
   cursor: pointer;
+  @media screen and (max-width: 375px){
+    font-size: 12px;
+    padding: 15px 20px;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -568,11 +660,18 @@ img[alt=build] {
 
 .gallery {
   padding: 140px 0;
-
+  @media screen and (max-width: 1170px){
+    padding: 40px 15px;
+  }
   &__title {
     @include title;
     margin-bottom: 100px;
-
+    @media screen and (max-width: 1170px){
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 620px){
+      font-size: 8vw;
+    }
     &:before {
       @include line;
       background-color: #2c4058;
@@ -582,21 +681,54 @@ img[alt=build] {
   &__flexbox {
     display: flex;
     margin-bottom: 73px;
-
+    justify-content: space-between;
+    @media screen and (max-width: 1170px){
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
     &__left {
-      width: 50%;
+      width: 580px;
       position: relative;
+      @media screen and (max-width: 1170px) {
+          margin-bottom: 4px;
+      }
+      @media screen and (max-width: 620px) {
+          width: 100%;
+      }
+      img {
+        @media screen and (max-width: 620px){
+          width: 100%;
+        }
+      }
     }
 
     &__right {
-      width: 50%;
+      width: 580px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
       align-content: space-between;
-
+    @media screen and (max-width: 620px){
+      width: 100%;
+    }
       div {
         position: relative;
+        @media screen and (max-width: 620px) {
+            width: 49%;
+        }
+        @media screen and (max-width: 425px){
+          width: 100%;
+          height: auto;
+        }
+      }
+      img {
+        @media screen and (max-width: 1170px) {
+          margin-bottom: 4px;
+        }
+        @media screen and (max-width: 620px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -701,9 +833,24 @@ img[alt=build] {
   flex-wrap: wrap;
   font-family: 'Gotham Book', sans-serif;
   font-size: 18px;
+  @media screen and (max-width: 770px){
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+  @media screen and (max-width:620px){
+    font-size: 16px;
+    padding: 20px;
+  }
   &__title {
     @include title;
     width: 100%;
+    @media screen and (max-width: 770px){
+      font-size: 24px;
+    }
     &:before {
       @include line;
       background-color: #2c4058;
@@ -712,6 +859,9 @@ img[alt=build] {
   }
   &__info {
     width: 50%;
+    @media screen and (max-width: 620px){
+      width: 100%;
+    }
     p {
       margin-top: 40px;
       .far, .fas {
@@ -727,6 +877,9 @@ img[alt=build] {
   &__right {
     width: 50%;
     margin-top: 25px;
+    @media screen and (max-width: 620px){
+    width: 100%;
+    }
     input {
       width: 100%;
       height: 50px;
@@ -751,19 +904,42 @@ footer {
   @include backgroundImage;
   background-image: url("../img/footer.png");
   padding: 200px 0;
+  @media screen and (max-width: 770px){
+    padding: 40px 15px;
+  }
   .footer {
     max-width: 770px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media screen and (max-width: 620px){
+      flex-direction: column;
+      align-items: center;
+    }
     &__copyright {
     width: 100%;
       font-family: 'Gotham Book', sans-serif;
       font-size: 14px;
       color: #fff;
       margin-top: 50px;
+      @media screen and (max-width: 770px){
+        text-align: center;
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 480px){
+        width: 54%;
+      }
+      @media screen and (max-width: 410px){
+        width: 64%;
+      }
+      @media screen and (max-width: 352px){
+        width: 76%;
+      }
       span {
         margin: 0 20px;
+        @media screen and (max-width: 480px){
+          display: none;
+        }
       }
     }
   }
