@@ -16,8 +16,8 @@
             slidesToScroll: 1,
             dots: true,
             adaptiveHeight: true,
-            autoplay: true,
-            autoplaySpeed: 4000,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
             responsive: [
                 {
                     breakpoint: 1024,

@@ -239,7 +239,7 @@ header nav {
 @media screen and (max-width: 620px) {
   .header .social {
     margin: 0 auto;
-    height: calc(100vh - 110px);
+    height: 100vw;
     align-items: flex-end;
     display: none;
   }
@@ -510,6 +510,11 @@ img[alt=build]:hover {
 .news .slick-track {
   margin: 0 auto 60px auto;
 }
+@media screen and (max-width: 1170px) {
+  .news .slick-dotted.slick-slider {
+    margin: 0 45px;
+  }
+}
 .news .slick-dots li.slick-active button:before {
   background-color: white;
   color: #ffffff;
@@ -545,12 +550,22 @@ img[alt=build]:hover {
   left: -100px;
   top: 45%;
 }
+@media screen and (max-width: 1170px) {
+  .news .slick-prev {
+    left: -45px;
+  }
+}
 .news .slick-prev:before {
   transform: rotate(45deg);
 }
 .news .slick-next {
   right: -100px;
   top: 45%;
+}
+@media screen and (max-width: 1170px) {
+  .news .slick-next {
+    right: -45px;
+  }
 }
 .news .slick-next:before {
   transform: rotate(-135deg);
@@ -604,6 +619,26 @@ img[alt=build]:hover {
   background-size: cover;
   position: relative;
   cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .news .block .img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .news .block .img {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .news .block .img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .news .block .img {
+    height: 170px;
+  }
 }
 .news .block .img:hover {
   opacity: 0.7;
@@ -663,12 +698,44 @@ img[alt=build]:hover {
   color: #2c4058;
   line-height: 34px;
 }
+@media screen and (max-width: 1169px) {
+  .news .block .content h3 {
+    line-height: 1.4em;
+    font-size: 1.9vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .news .block .content h3 {
+    font-size: 2.2vw;
+  }
+}
+@media screen and (max-width: 619px) {
+  .news .block .content h3 {
+    font-size: 3.6vw;
+  }
+}
 .news .block .content p {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: #4b5562;
   line-height: 30px;
   margin: 8px 0 37px 0;
+}
+@media screen and (max-width: 1169px) {
+  .news .block .content p {
+    line-height: 1.4em;
+    font-size: 1.6vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .news .block .content p {
+    font-size: 1.8vw;
+  }
+}
+@media screen and (max-width: 619px) {
+  .news .block .content p {
+    font-size: 2.9vw;
+  }
 }
 .news .block .content p span {
   display: none;
@@ -701,9 +768,20 @@ img[alt=build]:hover {
   margin-bottom: 10px;
   cursor: pointer;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1169px) {
+  .news .author .text h4 {
+    font-size: 1.6vw;
+    line-height: 1.1em;
+  }
+}
+@media screen and (max-width: 1023px) {
   .news .author .text h4 {
     font-size: 1.8vw;
+  }
+}
+@media screen and (max-width: 619px) {
+  .news .author .text h4 {
+    font-size: 2.9vw;
   }
 }
 .news .author .text .date {
@@ -715,9 +793,24 @@ img[alt=build]:hover {
   cursor: pointer;
   height: auto;
 }
+@media screen and (max-width: 1169px) {
+  .news .author .text .date {
+    font-size: 1.2vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .news .author .text .date {
+    font-size: 1.4vw;
+  }
+}
+@media screen and (max-width: 619px) {
+  .news .author .text .date {
+    font-size: 2.3vw;
+  }
+}
 @media screen and (max-width: 1024px) {
   .news .slick-slider {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 }
@@ -924,11 +1017,23 @@ img[alt=build]:hover {
   background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+@media screen and (max-width: 425px) {
+  .gallery__flexbox__left:hover::after,
+.gallery__flexbox__right div:hover::after {
+    display: none;
+  }
+}
 .gallery__flexbox__left:hover img[alt=global],
 .gallery__flexbox__right div:hover img[alt=global] {
   display: block;
   z-index: 1;
   cursor: pointer;
+}
+@media screen and (max-width: 425px) {
+  .gallery__flexbox__left:hover img[alt=global],
+.gallery__flexbox__right div:hover img[alt=global] {
+    display: none;
+  }
 }
 
 .gallery__flexbox__right div:hover::after {
@@ -1084,25 +1189,25 @@ footer .footer__copyright {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 483px) {
   footer .footer__copyright {
-    width: 54%;
+    width: 58%;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 412px) {
   footer .footer__copyright {
-    width: 64%;
+    width: 69%;
   }
 }
-@media screen and (max-width: 352px) {
+@media screen and (max-width: 356px) {
   footer .footer__copyright {
-    width: 76%;
+    width: 83%;
   }
 }
 footer .footer__copyright span {
   margin: 0 20px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 483px) {
   footer .footer__copyright span {
     display: none;
   }
